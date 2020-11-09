@@ -37,7 +37,7 @@
             <header class="header box">
                 <div class="header__left">
                     <div class="header__photo">
-                        <img class="header__photo-img" src="assets/img/profile.jpg" alt="Ugo Maia Fernandes">
+                        <img class="header__photo-img" src="assets/img/profile2.jpg" alt="Ugo Maia Fernandes">
                     </div>
                     <div class="header__base-info">
                         <h4 class="title titl--h4">Ugo Maia Fernandes</h4>
