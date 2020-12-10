@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>👨‍💻 Ugo Maia Fernandes 🚀</title>
+    <font color="Gold">
+        <title>👨‍💻 Ugo Maia Fernandes 🚀</title>
+    </font>
 
     <!-- Meta Data -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
