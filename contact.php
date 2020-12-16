@@ -16,8 +16,8 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/styles/style-dark.css" />
-
-
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 
 <body class="bg-triangles">
@@ -63,7 +63,6 @@
                                     <font color="GhostWhite"><i class="font-icon icon-twitter"></i></font>
                                 </a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
@@ -79,15 +78,25 @@
                         </li>
                         <li>
                             <h6>Telefone</h6>
-                            <p>
-                                <a href="https://api.whatsapp.com/send?phone=55xxxxxxxxxxx">
-                                    <font color="Yellow">+55 (91) xxxxx-xx41</font>
+                        <li>
+                            <h4>
+                                <a href="https://api.whatsapp.com/send?phone=559183196041">
+                                    <font color="Yellow"><span class="iconify" data-icon="tabler:brand-whatsapp"
+                                            data-inline="false"></span></font>
                                 </a>
-                            </p>
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="https://t.me/ugoaiam">
+                                    <font color="Yellow"><span class="iconify" data-icon="ri:telegram-line"
+                                            data-inline="false"></span></font>
+                                </a>
+                            </h4>
+                        </li>
                         </li>
                     </ul>
                     <ul class="header__contact">
-
                         <li>
                             <h6>Endereço</h6>
                             <p>
