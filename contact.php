@@ -112,20 +112,25 @@
                 <aside class="col-12 col-md-12 col-lg-2">
                     <div class="sidebar box sticky-column">
                         <ul class="nav">
+
                             <li class="nav__item">
                                 <a class="active" href="index.html">
                                     <font color="GhostWhite"><i class="icon-user"></i>Sobre Mim</font>
                                 </a>
+                            </li>
+                            <br><br>
                             <li class="nav__item">
                                 <a href="resume.html">
                                     <font color="GhostWhite"><i class="icon-file-text"></i>Currículo</font>
                                 </a>
                             </li>
+                            <br><br>
                             <li class="nav__item">
                                 <a href="works.html">
                                     <font color="GhostWhite"><i class="icon-codesandbox"></i>Portfólio</font>
                                 </a>
                             </li>
+
                             <!--<li class="nav__item"><a href="blog.html"><i class="icon-book-open"></i>Blog</a></li>-->
                             <li class="nav__item"><a href="contact.html"><i class="icon-book"></i>Contato</a></li>
                         </ul>
