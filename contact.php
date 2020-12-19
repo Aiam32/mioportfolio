@@ -111,7 +111,7 @@
                 <!-- Sidebar nav -->
                 <aside class="col-12 col-md-12 col-lg-2">
                     <div class="sidebar box sticky-column">
-                        </ul class="nav" />
+                        </ul class="nav">
                         <li class="nav__item">
                             <a class="active" href="index.html">
                                 <font color="GhostWhite"><i class="icon-user"></i>Sobre Mim</font>
@@ -132,7 +132,7 @@
 
                         <!--<li class="nav__item"><a href="blog.html"><i class="icon-book-open"></i>Blog</a></li>-->
                         <li class="nav__item"><a href="contact.html"><i class="icon-book"></i>Contato</a></li>
-                        </ul />
+                        </ul>
                     </div>
                 </aside>
 
