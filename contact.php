@@ -54,7 +54,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/user/fernandesugo/about?view_as=subscriber">
+                                <a href="https://www.youtube.com/channel/UCjJJ5jypdODojvax7P0diqA">
                                     <font color="GhostWhite"><i class="font-icon icon-youtube"></i></font>
                                 </a>
                             </li>
