@@ -1,0 +1,288 @@
+<meta charset="UTF-8">
+
+Construindo Pong. <br><br> 
+
+<a href="javascript:play_single_sound();"></a>
+<audio id="trilhaSonora" src="pong_sons/Trilha sonora.mp3" preload="auto"></audio>
+<audio id="raquetada" src="pong_sons/Raquetada.mp3" preload="auto"></audio>
+<audio id="ponto" src="pong_sons/Ponto.mp3" preload="auto"></audio>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var 
+        screen = document.querySelector("canvas");
+    var 
+        pincel = screen.getContext("2d");
+
+    pincel.fillStyle = 'white';
+    pincel.fillRect(0, 0, 600, 400);
+
+        // Bola
+        var 
+            x = 300;
+
+        var 
+            y = 200; // 390;
+
+        var 
+            raio = 10;
+
+        var 
+            sentidoX = 1.5;
+
+        var 
+            sentidoY = 1.5;
+
+        // Minha Raquete
+        var 
+            minhaRaqueteX = 0;
+
+        var 
+            minhaRaqueteY = 155;
+
+        var 
+            w = 10;
+
+        var 
+            h = 90;
+
+        // códigos do teclado (mover minha raquete)
+        var 
+            cima = 38;
+
+        var 
+            baixo = 40;
+
+        // taxa de incremento (mover minha raquete)
+        var 
+            taxa = 17;
+
+        // Raquete do Oponente
+        var 
+            raqueteOponenteX = 590;
+
+        var 
+            raqueteOponenteY = 155;
+
+        var 
+            wO = 10;
+
+        var 
+            hO = 90;
+
+        var 
+            sentidoRaqueteOponenteY = 1.5;
+
+        function play_single_sound() {
+
+            document.getElementById("trilhaSonora").play();
+        }
+
+            function desenhaBola(x, y, raio) {
+        
+                pincel.fillStyle = "black";
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 * Math.PI);
+                pincel.fill();
+                //console.log(x + ',' + y);
+            }
+
+            function movendoBola() {
+
+                if (x > 590) {
+
+                    sentidoX = -1.5;
+                } 
+
+                else if (x < 10) {
+
+                    sentidoX = 1.5;
+                }
+
+                if (y > 390) {
+
+                    sentidoY = -1.5;
+                } 
+
+                else if (y < 10) {
+
+                    sentidoY = 1.5;
+                }
+            }
+
+        function minhaRaquete(minhaRaqueteX, minhaRaqueteY, w, h, minhaRaqueteCor) {
+
+            pincel.fillStyle = minhaRaqueteCor;
+            pincel.fillRect(minhaRaqueteX, minhaRaqueteY, w, h);
+        }
+
+        function movendoMinhaRaquete(event) {
+        
+            // sabemos que é através de event.keyCode
+            // que temos acesso ao código da tecla pressionada
+
+            if (event.keyCode == cima && minhaRaqueteY > 5) {
+                                                      // 0
+
+                        minhaRaqueteY = minhaRaqueteY - taxa;
+            } 
+
+            else if (event.keyCode == baixo && minhaRaqueteY < 305) {
+                                                            // 310
+
+                        minhaRaqueteY = minhaRaqueteY + taxa;
+            }
+        }
+
+        document.onkeydown = movendoMinhaRaquete;
+
+        function colisaoMinhaRaquete() {
+
+            if (x - raio < minhaRaqueteX + w &&
+                y - raio < minhaRaqueteY + h &&
+                y + raio > minhaRaqueteY) {
+
+                    sentidoX = 1.5;
+                    document.getElementById("raquetada").play();
+            }
+        }
+
+        function raqueteOponente(raqueteOponenteX, raqueteOponenteY, wO, hO, raqueteOponeneteCor) {
+
+            pincel.fillStyle = raqueteOponeneteCor;
+            pincel.fillRect(raqueteOponenteX, raqueteOponenteY, wO, hO);
+        }
+
+        function movendoRaqueteOponente() {
+
+            if (raqueteOponenteY < 2) {
+                                // 0
+
+                //sentidoY = 1.5;
+                sentidoRaqueteOponenteY = 1.5;
+            } 
+
+            else if (raqueteOponenteY > 308) {
+                                     // 310
+
+                //sentidoY = - 1.5;
+                sentidoRaqueteOponenteY = -1.5;
+            }
+        }
+
+        function colisaoRaqueteOponente() {
+
+            if (x > raqueteOponenteX - wO &&
+                y + raio > raqueteOponenteY &&
+                y < raqueteOponenteY + hO) {
+
+                    sentidoX = - 1.5;
+                    document.getElementById("raquetada").play();
+            }
+        }
+
+            function desenhaPlacar(desenhaPlacarX, desenhaPlacarY, desenhaPlacarCor) {
+
+                pincel.fillStyle = desenhaPlacarCor;
+                pincel.fillRect(desenhaPlacarX, desenhaPlacarY, 50, 25);
+                pincel.strokeStyle = "DarkRed";
+                pincel.strokeRect(desenhaPlacarX, desenhaPlacarY, 50, 25);
+            }
+
+            var 
+                meusPontos = 0;
+
+            function placarTexto1(placarTexto1X, placarTexto1Y) {
+
+                var 
+                    screen = document.querySelector("canvas");
+                var 
+                    pincel = screen.getContext("2d");
+
+                    pincel.font = "16px Georgia";
+                    pincel.fillStyle = "black";
+                    pincel.fillText(meusPontos, placarTexto1X, placarTexto1Y);
+            }
+
+            function marcarMeusPontos() {
+
+                if (x > 590) {
+
+                    ++meusPontos; // meusPontos = meusPontos + 1
+                    document.getElementById("ponto").play();
+                }
+            }
+
+            var 
+                pontosOponente = 0;
+
+            function placarTexto2(placarTexto2X, placarTexto2Y) {
+
+                var 
+                    screen = document.querySelector("canvas");
+                var 
+                    pincel = screen.getContext("2d");
+
+                    pincel.font = "16px Georgia";
+                    pincel.fillStyle = "black";
+                    pincel.fillText(pontosOponente, placarTexto2X, placarTexto2Y);
+            }
+
+            function marcarPontosOponente() {
+
+                if (x < 10) {
+
+                    ++pontosOponente; // pontosOponente = pontosOponente + 1
+                    document.getElementById("ponto").play();
+                }
+            }
+
+        function limpaTela() {
+
+            pincel.clearRect(0, 0, 600, 400);
+        }
+
+        function atualizaTela() {
+            
+            limpaTela();
+            
+            // Sons do Jogo
+            play_single_sound();
+
+                // Bola
+                desenhaBola(x, y, raio);
+                movendoBola();
+                x = x + sentidoX;
+                y = y + sentidoY;
+
+            // Minha Raquete
+            minhaRaquete(minhaRaqueteX, minhaRaqueteY, w, h, "green");
+            colisaoMinhaRaquete();
+
+            // Raquete do Oponente
+            raqueteOponente(raqueteOponenteX, raqueteOponenteY, wO, hO, "green");
+            movendoRaqueteOponente();
+            raqueteOponenteY = raqueteOponenteY + sentidoRaqueteOponenteY; // sentidoY;
+
+            colisaoRaqueteOponente();
+
+                // Placar
+                desenhaPlacar(175, 0, "Gold"); // Meus pontos
+                desenhaPlacar(375, 0, "Gold"); // Pontos do oponente
+
+                // Pontos no Placar
+                placarTexto1(177, 20, meusPontos); // Meus pontos
+                placarTexto2(377, 20, pontosOponente); // Pontos do oponente
+
+                // Exibir Pontos no Placar
+                marcarMeusPontos(); // Meus pontos
+                marcarPontosOponente(); // Pontos do oponente
+        }
+
+        setInterval(atualizaTela, 1);
+
+        alert("Pressione as teclas PgUp, PgDn.");
+
+</script>
