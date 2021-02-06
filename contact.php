@@ -127,7 +127,11 @@
                                     <font color="GhostWhite"><i class="icon-codesandbox"></i>Portfólio</font>
                                 </a>
                             </li>
-
+                            <li class="nav__item">
+                                <a href="javascript/pong.html">
+                                    <font color="GhostWhite"><i class="icon-codesandbox"></i>Game</font>
+                                </a>
+                            </li>
                             <!--<li class="nav__item"><a href="blog.html"><i class="icon-book-open"></i>Blog</a></li>-->
                             <li class="nav__item"><a href="contact.html"><i class="icon-book"></i>Contato</a></li>
                         </ul>
