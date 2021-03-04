@@ -6,8 +6,12 @@
     <font color="Gold">
         <title>👨‍💻 Ugo Maia Fernandes 🚀</title>
     </font>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
 
     <!-- Meta Data -->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
