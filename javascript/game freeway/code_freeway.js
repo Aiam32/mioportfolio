@@ -147,6 +147,7 @@ audioPontos.src = "elements/sons/pontos.mp3"
         marcarPontos();
         perderPontos();
     }
+    alert("Use as teclas PgUp e PgDn");
 
     window.addEventListener("keydown", KeyDown, true);
     Iniciar();
