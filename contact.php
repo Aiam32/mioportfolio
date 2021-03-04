@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <font color="Gold">
-        <title>👨‍💻 Ugo Maia Fernandes 🚀</title>
-    </font>
+    <title>👨‍💻 Ugo Maia Fernandes 🚀</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
 
     <!-- Meta Data -->
