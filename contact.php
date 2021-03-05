@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>👨‍💻 Ugo Maia Fernandes 🚀</title>
-    <link rel="icon" type="imagem/png" href="assets/img/startup.png"/>
+    <link rel="icon" type="imagem/png" href="assets/img/startup.png" />
 
     <!-- Meta Data -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,11 +116,13 @@
                                     <font color="GhostWhite"><i class="icon-user"></i>Sobre Mim</font>
                                 </a>
                             </li>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav__item">
                                 <a href="resume.html">
                                     <font color="GhostWhite"><i class="icon-file-text"></i>Currículo</font>
                                 </a>
                             </li>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav__item">
                                 <a href="works.html">
                                     <font color="GhostWhite"><i class="icon-codesandbox"></i>Portfólio</font>
