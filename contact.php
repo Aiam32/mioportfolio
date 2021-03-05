@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>👨‍💻 Ugo Maia Fernandes 🚀</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon3.ico">
+    <link rel="icon" type="imagem/png" href="assets/img/startup.png"/>
 
     <!-- Meta Data -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
