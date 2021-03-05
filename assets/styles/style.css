@@ -1157,7 +1157,7 @@ button:focus {
 @media only screen and (max-width: 1200px) {
   .nav__item a {
     border-radius: 1rem;
-    font-size: 0.4rem;
+    font-size: 0.2rem;
   }
 }
 @media only screen and (max-width: 768px) {
