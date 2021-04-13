@@ -846,12 +846,16 @@ button:focus {
 .header__social li:last-child {
   margin-right: 0;
 }
-.header__social a {
-  color: #5E6E80;
+.header__social .iconify {
+  font-size: 20px;
   text-decoration: none;
 }
-.header__social a:hover {
-  color: #304CFD;
+.header__social .iconify:hover {
+  color: #00FFFF;
+  text-decoration: underline 2px;
+}
+.header__social .iconify:active {
+  color:orangered
 }
 @media only screen and (max-width: 991px) {
   .header__social {
@@ -882,6 +886,13 @@ button:focus {
   margin-bottom: 1rem;
   word-break: break-all;
 }
+.header__contact .email:hover {
+  color: #00FFFF; 
+  text-decoration: underline 1px;
+}
+.header__contact .email:active {
+  color: orangered;
+}
 @media only screen and (max-width: 580px) {
   .header__contact li {
     margin-bottom: 0.75rem;
@@ -890,7 +901,13 @@ button:focus {
 .header__contact li:last-child {
   margin-bottom: 0;
 }
-
+.header__contact .iconify:hover {
+  color: #00FFFF;
+  text-decoration: underline 2px;
+}
+.header__contact .iconify:active {
+  color:orangered
+}
 .status {
   font-size: 0.875rem;
   display: inline-flex;
