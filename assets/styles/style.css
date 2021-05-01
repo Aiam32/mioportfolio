@@ -803,11 +803,17 @@ button:focus {
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
   margin-top: -4rem;
-  height: 11rem;
   overflow: hidden;
-  width: 8rem;
+  width: 8.9rem;
+  height: 10.9rem;
 }
 @media only screen and (max-width: 1982px) {
+  .header__photo {
+    margin-top: -4rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (max-height: 2643px) {
   .header__photo {
     margin-top: -4rem;
     margin-bottom: 0.5rem;
@@ -820,6 +826,7 @@ button:focus {
 .header__base-info {
   margin-left: 1.5rem;
 }
+
 @media only screen and (max-width: 991px) {
   .header__base-info {
     margin-left: 0;
@@ -2299,6 +2306,13 @@ button:focus {
 }
 .timeline__item:last-child {
   border: 0;
+}
+.timeline__item .iconify:hover {
+  color: orangered;
+  text-decoration: underline 2px;
+}
+.timeline__item .iconify:active {
+  color: #FCFCFC;
 }
 .timeline__title {
   margin-bottom: 0;
