@@ -234,7 +234,7 @@ select option,
   color: #AEB0B8;
 }
 .nav__item a:hover {
-  color: #0D86FF;
+   color: #00FFFF;  /* #0D86FF */
 }
 @media only screen and (max-width: 580px) {
   .nav__item a {
@@ -242,7 +242,7 @@ select option,
   }
 }
 .nav__item a.active {
-  background-image: linear-gradient(142.17deg, #0DA2FF 6.66%, #0055FF 91.48%);
+  background-image: linear-gradient(142.17deg, #0DA2FF 6.66%, #FF6347 91.48%);
   box-shadow: inset -4px -4px 5px rgba(0, 0, 0, 0.2), inset 4px 4px 5px rgba(255, 255, 255, 0.23);
   color: #FCFCFC;
 }

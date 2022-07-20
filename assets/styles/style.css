@@ -302,7 +302,7 @@ a {
 a:hover {
   color: #304CFD;
   outline: none;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a.decoration--none {
   text-decoration: none;
@@ -854,6 +854,7 @@ button:focus {
   margin-right: 0;
 }
 .header__social .iconify {
+  color:GhostWhite;
   font-size: 20px;
   text-decoration: none;
 }
@@ -2307,9 +2308,11 @@ button:focus {
 .timeline__item:last-child {
   border: 0;
 }
+.timeline__item .iconify {
+  color: #00FFFF;
+}
 .timeline__item .iconify:hover {
   color: orangered;
-  text-decoration: underline 2px;
 }
 .timeline__item .iconify:active {
   color: #FCFCFC;
