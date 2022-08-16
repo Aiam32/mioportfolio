@@ -860,7 +860,6 @@ button:focus {
 }
 .header__social .iconify:hover {
   color: #00FFFF;
-  text-decoration: underline 2px;
 }
 .header__social .iconify:active {
   color:orangered
