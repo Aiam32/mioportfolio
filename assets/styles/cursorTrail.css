@@ -1,0 +1,53 @@
+:root{
+  --cursor-size: 15px;       /* tamanho da bola principal - ligeiramente maior que o rastro */
+  --cursor-color: #00fff2cc;   /* cor da bola */
+  --trail-size: 15px;        /* tamanho dos pontos do rastro */
+  --trail-length: 18;        /* quantidade de pontos no rastro */
+  --trail-fade: 0.65;        /* opacidade base do rastro */
+  --trail-blur: 4px;         /* desfoque do rastro */
+  --follow-smooth: 0.15;     /* suavidade do seguidor (0-1) */
+}
+
+body {
+  cursor: none; /* esconde o cursor nativo */
+}
+
+/* A bola principal */
+.cursor {
+    position: fixed;
+    left: 0; top: 0;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border-radius: 50%;
+    background: var(--cursor-color);
+    box-shadow:
+    0 0 0 2px rgba(255,255,255,0.08) inset,
+    0 0 15px 4px color-mix(in srgb, var(--cursor-color) 70%, transparent);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.12s ease-out;
+    mix-blend-mode: screen;
+    z-index: 99999;
+}
+
+/* Pontos do rastro */
+.trail {
+    position: fixed;
+    left: 0; top: 0;
+    width: var(--trail-size);
+    height: var(--trail-size);
+    border-radius: 50%;
+    background: var(--cursor-color);
+    opacity: var(--trail-fade);
+    filter: blur(var(--trail-blur));
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    z-index: 99990;
+}
+
+/* Acessibilidade: respeita preferência de reduzir movimento */
+@media (prefers-reduced-motion: reduce) {
+  .cursor, .trail { display: none !important; }
+  body { cursor: auto; }
+}
