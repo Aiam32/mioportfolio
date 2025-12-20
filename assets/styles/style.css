@@ -807,7 +807,7 @@ button:focus {
   margin-top: -4rem;
   overflow: hidden;
   width: 8.9rem;
-  height: 10.9rem;
+  aspect-ratio: 3 / 4; /* Proporção 3:4 definida aqui */
 }
 @media only screen and (max-width: 1982px) {
   .header__photo {
@@ -822,6 +822,7 @@ button:focus {
   }
 }
 .header__photo-img {
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
   height: 100%;
   width: 100%;
 }
