@@ -20,10 +20,6 @@ p{
 }
 
 html {
-  font-size: 1rem;
-  -webkit-overflow-scrolling: touch;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   -ms-overflow-x: hidden;
 }
 
