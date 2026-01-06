@@ -818,7 +818,7 @@ button:focus {
   }
 }
 .header__photo-img {
-  object-fit: contain; /* Garante que a imagem preencha o espaço sem distorção */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
   height: 100%;
   width: 100%;
 }
